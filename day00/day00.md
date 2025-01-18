@@ -6,7 +6,7 @@ Let’s make our first task. Please make a select statement which returns all pe
 ```sql
 SELECT * FROM person WHERE address = 'Kazan'
 ```
-![alt text](image-2.png)
+![alt text](image.png)
 
 
 #### Exercise 01 - First steps into SQL world
@@ -16,7 +16,7 @@ Please make a select statement which returns names , ages for all women from the
 SELECT * FROM person WHERE address='Kazan' AND gender='female'
 ORDER BY name
 ```
-![alt text](image-3.png)
+![alt text](image1.png)
 
 #### Exercise 02 - First steps into SQL world
 Please make 2 syntax different select statements which return a list of pizzerias (pizzeria name and rating) with rating between 3.5 and 5 points (including limit points) and ordered by pizzeria rating.
@@ -25,7 +25,7 @@ Please make 2 syntax different select statements which return a list of pizzeria
 SELECT * FROM pizzeria WHERE rating>=3.5 AND rating<=5
 ORDER BY rating
 ```
-![alt text](image-2.png)
+![alt text](2.png)
 
 
 #### Exercise 03: First steps into SQL
@@ -35,7 +35,7 @@ Please make a select statement which returns the person's identifiers (without d
 SELECT * FROM person_visits WHERE visit_date BETWEEN '2022-01-06' AND '2022-01-09' AND pizzeria_id=2
 ORDER BY person_id desc
 ```
-![alt text](image-7.png)
+![alt text](3.png)
 
 
 #### Exercise 04 - First steps into SQL world
@@ -50,7 +50,7 @@ Please pay attention to quote symbols in your formula!
 SELECT concat('age:',age,',gender:',gender,',address:',address) AS person_information
 FROM person 
 ```
-![alt text](image-8.png)
+![alt text](4.png)
 
 #### Exercise 05 - First steps into SQL world
 Please make a select statement which returns person's names (based on internal query in `SELECT` clause) who made orders for the menu with identifiers 13 , 14 and 18 and date of orders should be equal 7th of January 2022. Be aware with "Denied Section" before your work.
@@ -70,7 +70,7 @@ WHERE id IN
 	WHERE order_date = '2022-01-07' AND menu_id IN(13,14,18)
 )
 ```
-![alt text](image.png)
+![alt text](5.png)
 
 
 #### Exercise 06 - First steps into SQL world
@@ -95,7 +95,7 @@ SELECT
 FROM 
     person 
 ```
-![alt text](image-3.png)
+![alt text](6.png)
 
 #### Exercise 07 - First steps into SQL world
 Let’s apply data intervals for the `person` table. 
@@ -120,7 +120,7 @@ SELECT
 FROM person 
 ORDER BY interval_info ASC;
 ```
-![alt text](image-4.png)
+![alt text](7.png)
 
 
 #### Exercise 08 - First steps into SQL world
@@ -132,7 +132,7 @@ FROM person_order
 WHERE id % 2 = 0
 ORDER BY id;
 ```
-![alt text](image-5.png)
+![alt text](8.png)
 
 
 #### Exercise 09 - First steps into SQL world
@@ -156,4 +156,4 @@ FROM (SELECT person_id, pizzeria_id
       WHERE visit_date BETWEEN '2022-01-07' AND '2022-01-09') AS pv 
 ORDER BY person_name ASC, pizzeria_name DESC;
 ```
-![alt text](image-7.png)
+![alt text](9.png)
